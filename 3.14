@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ellipse with Animated Background and Resume</title>
+    <style>
+        /* Ellipse with animated radial-gradient background */
+        .ellipse {
+            width: 200px;
+            height: 100px;
+            background: radial-gradient(circle, red, yellow, green);
+            border-radius: 50%;
+            animation: animateBackground 5s infinite;
+        }
+
+        @keyframes animateBackground {
+            0% { background: radial-gradient(circle, red, yellow, green); }
+            50% { background: radial-gradient(circle, green, yellow, red); }
+            100% { background: radial-gradient(circle, red, yellow, green); }
+        }
+
+        /* Resume layout using CSS Grid */
+        .resume {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .resume header {
+            grid-column: 1 / -1;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 10px;
+        }
+
+        .resume aside {
+            background-color: #e2e2e2;
+            padding: 10px;
+        }
+
+        .resume main {
+            background-color: #fff;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ellipse"></div>
+
+    <div class="resume">
+        <header>
+            <h1>John Doe</h1>
+            <p>Web Developer</p>
+        </header>
+        <aside>
+            <h2>Contact</h2>
+            <p>Email: john.doe@example.com</p>
+            <p>Phone: 123-456-7890</p>
+        </aside>
+        <main>
+            <h2>Experience</h2>
+            <p>Web Developer at XYZ Corp (2020 - Present)</p>
+            <p>Intern at ABC Inc (2018 - 2020)</p>
+        </main>
+    </div>
+</body>
+</html>
