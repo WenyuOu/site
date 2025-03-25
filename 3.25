@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二次方程求解器</title>
+</head>
+<body>
+    <script>
+        // (1) 三次调用prompt函数获取系数a, b, c
+        let a = prompt("请输入二次项系数a (a > 0):");
+        let b = prompt("请输入一次项系数b:");
+        let c = prompt("请输入常数项c:");
+        
+        // (2) 使用parseFloat转换为数字
+        a = parseFloat(a);
+        b = parseFloat(b);
+        c = parseFloat(c);
+        
+        // (3) 计算判别式delta (假设delta >= 0, a > 0)
+        const delta = b * b - 4 * a * c;
+        
+        // (4) 计算两个根
+        const x1 = (-b + Math.sqrt(delta)) / (2 * a);
+        const x2 = (-b - Math.sqrt(delta)) / (2 * a);
+        
+        // (5) 使用alert显示结果
+        alert(`方程的解为: x1 = ${x1}, x2 = ${x2}`);
+        
+        // (6) 使用console.log输出同样结果
+        console.log(`系数: a = ${a}, b = ${b}, c = ${c}`);
+        console.log(`方程的解为: x1 = ${x1}, x2 = ${x2}`);
+    </script>
+</body>
+</html>
